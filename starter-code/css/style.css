@@ -2,12 +2,20 @@ input {
   border: solid 1px black;
 }
 
+label {
+  margin-right: 10px;
+}
+
+h1 {
+  margin: 10px;
+}
+
 .btn {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 1.42857143;
   text-align: center;
   white-space: nowrap;
@@ -28,6 +36,7 @@ input {
     color: #fff;
     background-color: #5cb85c;
     border-color: #4cae4c;
+    margin-bottom: 30px;
 }
 
 .btn-delete {
@@ -35,7 +44,43 @@ input {
     background-color: #CF000F;
     border-color: #CF000F;
 }
-
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .quantity {
   margin: 0 5px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.item > div {
+  min-width: 240px;
+}
+
+.item div:nth-child(4), .item div:nth-child(5) {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.final-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.final-price h2 span {
+  margin-left: 10px;
+}
+
+.price:before, .total:before, #totalSum:before {
+content: '$';
 }
